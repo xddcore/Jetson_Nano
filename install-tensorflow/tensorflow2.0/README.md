@@ -6,9 +6,10 @@
 ```
 ## How to ues?
 ```python
-pip3 install tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl
+pip3 install tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl --user
 ```
 # PS:
+## 0.The python version is must be 3.6
 ## 1.The pip version is must be 19.3.1
 ## 2.The python setuptools version is must be >=41.0.0
 ## 3.The pyasn1-moduled version is must be >=0.2.1
@@ -90,7 +91,7 @@ pip3 install --upgrade grpcio --user
 ### and then the grpcio will be upgrade!
 
 
-# In the end, enter code in terminal:
+# In the end, When you finish above step,and then enter code in terminal:
 ```python
 python3
 ```
@@ -100,6 +101,12 @@ import tensorflow as tf
 ```python
 tf.__version__
 ```
+## The terminal will print:
+```python
+(I compiling,the Reuslt don't know)
+```
+## that mean you success install tensorflow2.0
+# Good luck!
 
 
 
