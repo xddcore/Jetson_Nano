@@ -103,7 +103,7 @@ tf.__version__
 ```
 ## The terminal will print:
 ```python
-(I compiling,the Reuslt don't know)
+'2.0.0'
 ```
 ## that mean you success install tensorflow2.0
 # Good luck!

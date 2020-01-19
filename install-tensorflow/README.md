@@ -29,7 +29,8 @@ zsh + oh_my_zsh
 SpaceVim
 etc.
 If you want to know more,please see "Install-tensorflow2.0.sh".
-and if your network is bad,you can get tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl.(The download link in ./tensorflow2.0/README.md)
+
+# PS:If your network is bad,you can get tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl.(The download link in ./tensorflow2.0/README.md)
 ```python
 pip3 install tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl
 ```
