@@ -14,21 +14,8 @@ tensorflow-gpu
 etc.
 If you want to know more,please see "Install-tensorflow1.x.sh".
 ### tensorflow2.0
-If you want to install tensorflow2.0,please Enter the following code in terminal.
-```Bash
-bash Install-tensorflow2.0.sh
-```
-When you run this code,the jetson nano will install:
-python3.6
-python3.6-dev
-tensorflow2.0
-numpy
-grpcio
-tensorflow2.0-gpu
-zsh + oh_my_zsh 
-SpaceVim
-etc.
-If you want to know more,please see "Install-tensorflow2.0.sh".
+
+### the network always bad.......
 
 # PS:If your network is bad,you can get tensorflow_gpu-2.0.0+nv19.11-cp36-cp36m-linux_aarch64.whl.(The download link in ./tensorflow2.0/README.md)
 ```python
