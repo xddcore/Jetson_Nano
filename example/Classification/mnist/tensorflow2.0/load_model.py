@@ -5,10 +5,10 @@ import numpy as np
 
 # 模型加载
 
-model = tf.keras.models.load_model('./save/1660ti_tf2.1_py3.7/save_models/hdf5/1660ti_1.h5')
+model = tf.keras.models.load_model('./save/1660ti_tf2.1_py3.7/save_models/hdf5/1660ti_cnn_1.h5')
 
-image_value_5 = tf.io.read_file('./pic/5.png')
-image_value_2 = tf.io.read_file('./pic/2.png')
+image_value_5 = tf.io.read_file('./pic/7.png')
+image_value_2 = tf.io.read_file('./pic/6.png')
 image_value_0 = tf.io.read_file('./pic/0.png')
 
 #解码为tensor
@@ -22,9 +22,9 @@ image_value_2 = image_value_2.numpy()
 image_value_0 = image_value_0.numpy()
 
 #转为三维数组
-image_value_5 = image_value_5.reshape(1,28,28)
-image_value_2 = image_value_2.reshape(1,28,28)
-image_value_0 = image_value_0.reshape(1,28,28)
+image_value_5 = image_value_5.reshape(-1,28,28,1)
+image_value_2 = image_value_2.reshape(-1,28,28,1)
+image_value_0 = image_value_0.reshape(-1,28,28,1)
 
 #输入模型进行预测
 predict_value_5 = model.predict(image_value_5,batch_size = None)
