@@ -32,7 +32,7 @@ model.compile(optimizer=optimizers.Adam(lr=1e-4), loss='sparse_categorical_cross
 model.summary()
 print(len(model.layers))
 # 训练模型
-history = model.fit(x_train, y_train, epochs=100, validation_freq=1,
+history = model.fit(x_train, y_train, epochs=2000, validation_freq=1,
                   validation_data=(x_valid,y_valid))
 # 验证模型：
 model.evaluate(x_test,  y_test, verbose=2)
@@ -42,10 +42,10 @@ history_dict = history.history         # history对象有一个history成员，�
 print(history_dict)
 
 # 保存模型权重和偏置
-model.save_weights('./save/1660ti_tf2.1_py3.7/save_weights/')
+model.save_weights('./jetson/')
 
 #保存完整模型(含网络)
-model.save('./save/1660ti_tf2.1_py3.7/save_models/hdf5/1660ti_1.h5')
+model.save('./jetson/jetson_nano_1.h5')
 
 
 
