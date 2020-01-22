@@ -5,7 +5,7 @@ from tensorflow.keras import models, layers, optimizers
 import matplotlib.pyplot as plt
 
 # Mnist数据集加载
-(x_train_all, y_train_all), (x_test, y_test) = keras.datasets.mnist.load_data()
+(x_train_all, y_train_all), (x_test, y_test) = keras.datasets.mnist.load_data("./data-mnist")
 # Mnist数据集简单归一化
 x_train_all, x_test = x_train_all / 255.0, x_test / 255.0
 
@@ -32,7 +32,7 @@ model.compile(optimizer=optimizers.Adam(lr=1e-4), loss='sparse_categorical_cross
 model.summary()
 print(len(model.layers))
 # 训练模型
-history = model.fit(x_train, y_train, epochs=20, validation_freq=1,
+history = model.fit(x_train, y_train, epochs=100, validation_freq=1,
                   validation_data=(x_valid,y_valid))
 # 验证模型：
 model.evaluate(x_test,  y_test, verbose=2)
@@ -40,6 +40,14 @@ model.evaluate(x_test,  y_test, verbose=2)
 
 history_dict = history.history         # history对象有一个history成员，它是一个字典，包含训练过程中的所有数据。
 print(history_dict)
+
+# 保存模型权重和偏置
+model.save_weights('./save/1660ti_tf2.1_py3.7/save_weights/')
+
+#保存完整模型(含网络)
+model.save('./save/1660ti_tf2.1_py3.7/save_models/hdf5/1660ti_1.h5')
+
+
 
 # 绘制loss曲线
 loss_values = history_dict['loss']
